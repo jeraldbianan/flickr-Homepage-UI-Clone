@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url('../fonts/FontsFree-Net-Proxima-Nova-Sbold.otf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima';
+}
+
+body {
+  background-color: rgb(78, 74, 74);
+}
+
+.main-container {
+  background: url('../img/kid.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 94vh;
+  animation: changeBG 15s ease infinite;
+  animation-direction: alternate;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flickr-logo {
+  height: 22px;
+  margin-left: 23px;
+  margin-right: 5px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+}
+
+.nav-input i {
+  position: relative;
+  left: 30px;
+  top: 2px;
+}
+
+.nav-input > input {
+  background-color: #adadad;
+  border-radius: 3px;
+  border: none;
+  height: 30px;
+  width: 1350px;
+  padding-left: 30px;
+}
+
+.nav-input > input:focus {
+  background-color: white;
+}
+
+.nav-buttons {
+  margin-right: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in {
+  color: white;
+  margin-right: 20px;
+}
+
+.sign-up {
+  padding: 7px 23px;
+  font-size: 16px;
+}
+
+.sign-up:hover {
+  transition: all ease 500ms;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header {
+  color: white;
+  font-size: 54px;
+  margin-bottom: 25px;
+  padding-top: 250px;
+}
+
+.sub-header {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.sub-header-span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.start-btn {
+  background-color: white;
+  color: black;
+  height: 60px;
+  width: 200px;
+  border: none;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.start-btn:hover {
+  transition: all ease 500ms;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6vh;
+  background-color: black;
+}
+
+.ft-links {
+  text-decoration: none;
+  color: rgb(146, 145, 145);
+  font-size: 14px;
+}
+
+.icons {
+  margin: 0px 20px;
+}
+
+@keyframes changeBG {
+  25% {
+    background-image: url('../img/kid.jpg');
+  }
+  50% {
+    background-image: url('../img/kid2.jpg');
+  }
+  75% {
+    background-image: url('../img/kid3.jpg');
+  }
+  100% {
+    background-image: url('../img/entrance.jpg');
+  }
+}

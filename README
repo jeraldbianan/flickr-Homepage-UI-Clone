@@ -1,1 +1,7 @@
-Just a Sample HTML and CSS Project to get better
+## Just a Sample HTML and CSS Project to get better
+
+flickr Homepage UI Clone with pure HTML and CSS - no mobile responsiveness
+
+used Font-awesome CDN to in order to use Fontawesome Icons
+
+CDN - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css
