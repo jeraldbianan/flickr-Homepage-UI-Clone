@@ -11,7 +11,7 @@
 }
 
 .container {
-  max-width: 0 auto;
+  max-width: 1920px auto;
   margin: 0 auto;
 }
 
@@ -23,10 +23,7 @@
   height: 94vh;
   animation: changeBG 15s ease infinite;
   animation-direction: alternate;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
 }
 
 nav {
@@ -34,13 +31,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
+  width: 100%;
   height: 64px;
 }
 
 .logo-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-right: 60px;
 }
 
 .flickr-logo {
@@ -84,11 +84,25 @@ nav {
 .nav-buttons {
   margin-right: 23px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  max-width: 300px;
+  width: 100%;
 }
 
-.log-in {
+.nav-buttons .nav-buttons-mobile {
+  display: none;
+}
+
+.nav-buttons .nav-buttons-pc {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 175px;
+  width: 100%;
+}
+
+.login {
   color: white;
   margin-right: 20px;
 }
@@ -108,13 +122,18 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 100%;
 }
 
 .main-header {
   color: white;
   font-size: 54px;
   margin-bottom: 25px;
-  padding-top: 250px;
 }
 
 .sub-header {
@@ -146,16 +165,32 @@ nav {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 6vh;
   background-color: black;
 }
 
+footer .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 40px;
+}
+
 .ft-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   color: rgb(146, 145, 145);
   font-size: 14px;
+  height: 40px;
+}
+
+.ft-links .icons:hover {
+  transform: scale(1.1);
 }
 
 .icons {
@@ -174,5 +209,102 @@ footer {
   }
   100% {
     background-image: url('../img/entrance.jpg');
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .main-container {
+    height: 88vh;
+  }
+
+  .nav-buttons .nav-buttons-mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-buttons .nav-buttons-mobile .search {
+    color: white;
+    margin-right: 25px;
+  }
+
+  .nav-buttons .nav-buttons-mobile .login-mobile {
+    display: none;
+  }
+
+  footer {
+    height: 12vh;
+    max-width: 1080px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main-container {
+    height: 100vh;
+  }
+
+  .nav-input {
+    display: none;
+  }
+  .nav-buttons .nav-buttons-pc {
+    display: none;
+  }
+
+  .nav-buttons .nav-buttons-mobile .login-mobile {
+    display: block;
+    color: white;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    padding: 8px 10px;
+  }
+
+  .content .main-header {
+    font-size: 35px;
+  }
+
+  .content .sub-header {
+    display: none;
+  }
+
+  .content .start-btn {
+    height: 45px;
+    width: 120px;
+    font-size: 16px;
+  }
+
+  footer {
+    min-height: 700px;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 10px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  .ft-links {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons {
+    margin: 0 10px 0 0;
+  }
+
+  .ft-smug {
+    width: 100%;
+  }
+
+  .ft-brands {
+    width: 100%;
   }
 }
